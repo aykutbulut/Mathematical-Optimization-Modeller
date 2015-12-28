@@ -40,7 +40,9 @@ After registering all your variables call build_map() function, which maps all v
 ```
 
 From now on when you need to get the index for variable x_ij, you can use
+```C++
   model->get_index(x, std::vector<int>({i,j}))
+```
   
 You can also create rows using variables you defined. The following code block creates a set of constraints.
 ```C++
