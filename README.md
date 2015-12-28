@@ -6,4 +6,4 @@ Install
 ====
 "./configure && make install" should work. It will create include and lib directories in the current directory and install headers and library to them.
 
-If you want to install to a different location you can use "./configure --prefix=installation_path && amke install".
+If you want to install to a different location you can use "./configure --prefix=installation_path && make install".
