@@ -12,5 +12,4 @@ env:
 script: ./configure && make install
 
 os:
-  - linux
   - osx
