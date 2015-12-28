@@ -19,22 +19,31 @@ Create a modeller object
   
  
 Create index sets.
+```C++
   Set * I = new Set("I", 2);
   Set * J = new Set("J", 3);
+```
 
 Creating a variable with index set I and J.
+```C++
   Variable * x = new Variable("x", std::vector<Set*>({I, J}));
+```
 
 Register varible to the model
+```C++
   model->register_variable(x);
+```
   
 After registering all your variables call build_map() function, which maps all variables (x_ij s) to an index.
+```C++
   model->build_map();
+```
 
 From now on when you need to get the index for variable x_ij, you can use
   model->get_index(x, std::vector<int>({i,j}))
   
 You can also create rows using variables you defined. The following code block creates a set of constraints.
+```C++
   // this c++ code snippet generates following constraint set (vectors on the left hand side only)
   // sum (i in I) x_ij = 1 (for all j in J)
   std::vector<Row*> rows;
@@ -49,8 +58,10 @@ You can also create rows using variables you defined. The following code block c
     vars.clear();
     coef.clear();ind.clear();
   }
+```
 
 Then you can get sparse form of the rows generated using 
+```C++
   for (auto const & r: rows) {
     int size = r->size();
     int * indices = new int[size];
@@ -62,5 +73,6 @@ Then you can get sparse form of the rows generated using
     delete[] indices;
     delete[] coefficients;
   }
+```
 
 See examples directory for complete examples.
