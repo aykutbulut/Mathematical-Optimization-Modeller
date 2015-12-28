@@ -6,6 +6,9 @@ compiler:
 before_install:
   - autoreconf
 
+env:
+- CXXFLAGS=-std=c++11
+
 script: ./configure && make install
 
 os:
