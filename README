@@ -1,0 +1,7 @@
+This package helps building mathematical optimization models. It will keep
+track of variables and assigned indices. It aims to help the user when using
+C++ interface for any kind of mathematical optimization solver.
+
+Modeller does not aim to provide an environment like AMPL and GAMS. It is
+just a helper when using C++ interface of solvers, like COIN-OR OSI.
+Check examples for help.
