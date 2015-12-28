@@ -1,0 +1,10 @@
+language: cpp
+
+compiler:
+  - gcc
+
+script: ./configure && make install
+
+os:
+  - linux
+  - osx
