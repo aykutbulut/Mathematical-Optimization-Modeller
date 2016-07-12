@@ -58,7 +58,8 @@ You can also create rows using variables you defined. The following code block c
     }
     rows.push_back(new Row(model, vars, ind, coef));
     vars.clear();
-    coef.clear();ind.clear();
+    coef.clear();
+    ind.clear();
   }
 ```
 
