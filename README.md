@@ -71,7 +71,8 @@ Then you can get sparse form of the rows generated using
     double * coefficients = new double[size];
     r->get_ind(indices);
     r->get_coef(coefficient);
-    // do whatever you want with sparse row, nonzero column indices are stored at "indices"
+    // do whatever you want with sparse row.
+    // nonzero column indices are stored at "indices"
     // the corresponding coefficients are stored in "coefficients".
     // you probably would want to add it to your solver at this point.
     delete[] indices;
